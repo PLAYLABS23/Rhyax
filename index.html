@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Hataku</title>
+
+    <link rel="stylesheet" href="./style/engine.css">
+    <script src="./script/engine.js"></script>
+</head>
+
+<body>
+    <!-- MAIN ENGINE -->
+    <IKUYO-ENGINE>
+        <!-- Touch Event Layer -->
+        <layer id="column">
+            <!-- Top Button Layer -->
+            <layer id="row">
+                <button onclick="TopLeft()"></button>
+                <button onclick="TopRight()"></button>
+            </layer>
+            <!-- Bottom Button Layer -->
+            <layer id="row">
+                <button onclick="BottomLeft()"></button>
+                <button onclick="BottomRight()"></button>
+            </layer>
+        </layer>
+        <!-- Audio Engine -->
+        <audio id="audio"></audio>
+    </IKUYO-ENGINE>
+    
+    <script src="./music/TEST/sheet.js"></script>
+</body>
+
+</html>
