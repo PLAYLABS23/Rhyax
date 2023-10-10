@@ -15,8 +15,7 @@ window.onload = () => {
         else if (e.keyCode === 74) BottomLeft();
         else if (e.keyCode === 75) BottomRight();
     });
-
-    StartGame();
+    // StartGame();
 }
 
 function EventLogger(title, content, err = false) {

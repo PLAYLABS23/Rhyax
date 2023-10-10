@@ -1,18 +1,20 @@
 html, body {
     margin: 0;
+    overflow: hidden;
 }
 
 IKUYO-ENGINE {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: black !important;
+    background: white;
+    overflow: hidden;
 }
 
 layer {
     width: 100%;
     height: 100%;
-    justify-content: center !important;
+    justify-content: center;
 }
 
 button {
