@@ -249,9 +249,11 @@ function ScanNote(index) {
         else if (SCANVALUE > 0)     PERFECT();
 
         // DEBUGGER
-        document.getElementById("d9").innerHTML = NOTEINFO;
-        document.getElementById("d10").innerHTML = SCANVALUE;
-        document.getElementById("d11").innerHTML = NOTEINFO[2];
+        if (document.querySelector("IKUYO-ENGINE").id.includes("enable-debugger")) {
+            document.getElementById("d9").innerHTML = NOTEINFO;
+            document.getElementById("d10").innerHTML = SCANVALUE;
+            document.getElementById("d11").innerHTML = NOTEINFO[2];
+        }
 
         ClearNote(index, NOTEINFO[2]);
     }
@@ -271,12 +273,14 @@ function NoteParser(NoteData) {
                 NoteData[index]["IsCreated"] = true;
             }
 
-        // DEBUGGER
-        document.getElementById("d15").innerHTML = NoteCreateTime;
-        document.getElementById("d16").innerHTML = NoteDestroyTime;
-        document.getElementById("d17").innerHTML = NoteCreated;
-        document.getElementById("d18").innerHTML = Position;
-        document.getElementById("d19").innerHTML = Type;
+            // DEBUGGER
+            if (document.querySelector("IKUYO-ENGINE").id.includes("enable-debugger")) {
+                document.getElementById("d15").innerHTML = NoteCreateTime;
+                document.getElementById("d16").innerHTML = NoteDestroyTime;
+                document.getElementById("d17").innerHTML = NoteCreated;
+                document.getElementById("d18").innerHTML = Position;
+                document.getElementById("d19").innerHTML = Type;
+            }
         }
     });
 }
