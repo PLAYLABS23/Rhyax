@@ -14,10 +14,10 @@ window.onload = () => {
     AudioEngine = document.getElementById("audio");
     
     window.addEventListener("keydown", (e) => {
-        if      (e.keyCode === 68) TopLeft();
-        else if (e.keyCode === 70) TopRight();
-        else if (e.keyCode === 74) BottomLeft();
-        else if (e.keyCode === 75) BottomRight();
+        if      (e.keyCode === 68) KeyD();
+        else if (e.keyCode === 70) KeyF();
+        else if (e.keyCode === 74) KeyJ();
+        else if (e.keyCode === 75) KeyK();
     });
 
     // DEBUGGER
@@ -185,19 +185,19 @@ window.onload = () => {
     }
 }
 
-function TopLeft() {
+function KeyD() {
     RecentEvents[0] = TimeStamp;
 }
 
-function TopRight() {
+function KeyF() {
     RecentEvents[1] = TimeStamp;
 }
 
-function BottomLeft() {
+function KeyJ() {
     RecentEvents[2] = TimeStamp;
 }
 
-function BottomRight() {
+function KeyK() {
     RecentEvents[3] = TimeStamp;
 }
 

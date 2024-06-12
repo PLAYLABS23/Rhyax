@@ -14,22 +14,23 @@
 
 <body>
     <!-- MAIN ENGINE -->
-    <IKUYO-ENGINE id="enable-debugger">
-        <!-- Touch Event Layer -->
-        <layer id="column">
-            <!-- Top Button Layer -->
-            <layer id="row">
-                <button onclick="TopLeft()"></button>
-                <button onclick="TopRight()"></button>
+    <IKUYO-ENGINE>
+        <!-- Key Input -->
+        <layer class="note-area" id="column">
+            <layer class="note-display" id="row">
+
             </layer>
-            <!-- Bottom Button Layer -->
-            <layer id="row">
-                <button onclick="BottomLeft()"></button>
-                <button onclick="BottomRight()"></button>
+            <layer class="input-area" id="row">
+                <button onclick="KeyD()"></button>
+                <button onclick="KeyF()"></button>
+                <button onclick="KeyJ()"></button>
+                <button onclick="KeyK()"></button>
             </layer>
         </layer>
+
         <!-- Audio Engine -->
         <audio id="audio"></audio>
+
     </IKUYO-ENGINE>
 
     <script src="./music/BeatTest/sheet.js"></script>
