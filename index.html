@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <title>Hataku</title>
+    <title>Rhyax</title>
 
     <link rel="stylesheet" href="./style/IkuyoEngine.css">
     <link rel="stylesheet" href="./style/IkuyoDebugger.css">
@@ -18,13 +18,16 @@
         <!-- Key Input -->
         <layer class="note-area" id="column">
             <layer class="note-display" id="row">
-
+                <layer class="key-display" id="displayD"></layer>
+                <layer class="key-display" id="displayF"></layer>
+                <layer class="key-display" id="displayJ"></layer>
+                <layer class="key-display" id="displayK"></layer>
             </layer>
             <layer class="input-area" id="row">
-                <button onclick="KeyD()"></button>
-                <button onclick="KeyF()"></button>
-                <button onclick="KeyJ()"></button>
-                <button onclick="KeyK()"></button>
+                <button id="KeyD"></button>
+                <button id="KeyF"></button>
+                <button id="KeyJ"></button>
+                <button id="KeyK"></button>
             </layer>
         </layer>
 

@@ -14,10 +14,17 @@ window.onload = () => {
     AudioEngine = document.getElementById("audio");
     
     window.addEventListener("keydown", (e) => {
-        if      (e.keyCode === 68) KeyD();
-        else if (e.keyCode === 70) KeyF();
-        else if (e.keyCode === 74) KeyJ();
-        else if (e.keyCode === 75) KeyK();
+        if      (e.keyCode === 68) KeyD_Down();
+        else if (e.keyCode === 70) KeyF_Down();
+        else if (e.keyCode === 74) KeyJ_Down();
+        else if (e.keyCode === 75) KeyK_Down();
+    });
+
+    window.addEventListener("keyup", (e) => {
+        if      (e.keyCode === 68) KeyD_Up();
+        else if (e.keyCode === 70) KeyF_Up();
+        else if (e.keyCode === 74) KeyJ_Up();
+        else if (e.keyCode === 75) KeyK_Up();
     });
 
     // DEBUGGER
@@ -185,20 +192,48 @@ window.onload = () => {
     }
 }
 
-function KeyD() {
+function KeyD_Down() {
+    document.querySelector("#KeyD").classList.add("keypress");
+    document.querySelector("#displayD").classList.add("keypress");
     RecentEvents[0] = TimeStamp;
 }
 
-function KeyF() {
+function KeyD_Up() {
+    document.querySelector("#KeyD").classList.remove("keypress");
+    document.querySelector("#displayD").classList.remove("keypress");
+}
+
+function KeyF_Down() {
+    document.querySelector("#KeyF").classList.add("keypress");
+    document.querySelector("#displayF").classList.add("keypress");
     RecentEvents[1] = TimeStamp;
 }
 
-function KeyJ() {
+function KeyF_Up() {
+    document.querySelector("#KeyF").classList.remove("keypress");
+    document.querySelector("#displayF").classList.remove("keypress");
+}
+
+function KeyJ_Down() {
+    document.querySelector("#KeyJ").classList.add("keypress");
+    document.querySelector("#displayJ").classList.add("keypress");
     RecentEvents[2] = TimeStamp;
 }
 
-function KeyK() {
+function KeyJ_Up() {
+    document.querySelector("#KeyJ").classList.remove("keypress");
+    document.querySelector("#displayJ").classList.remove("keypress");
+}
+
+function KeyK_Down() {
+    document.querySelector("#KeyK").classList.add("keypress");
+    document.querySelector("#displayK").classList.add("keypress");
     RecentEvents[3] = TimeStamp;
+}
+
+function KeyK_Up() {
+    document.querySelector("#KeyK").classList.remove("keypress");
+    document.querySelector("#displayK").classList.remove("keypress");
 }
 
 function StartGame() {
